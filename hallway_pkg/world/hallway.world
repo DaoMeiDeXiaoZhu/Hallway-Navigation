@@ -1,0 +1,396 @@
+<sdf version="1.7">
+  <world name="default">
+    <plugin name="gazebo_ros_state" filename="libgazebo_ros_state.so">
+      <ros>
+        <namespace>/</namespace>
+      </ros>
+      <update_rate>10.0</update_rate>
+    </plugin>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <model name="right_wall">
+      <pose>0 -2.15 2.5 0 0 0</pose>
+      
+      <static>true</static>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>40 0.3 5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>40 0.3 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/White</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="left_wall">
+      <pose>0 2.15 2.5 0 0 0</pose>
+      
+      <static>true</static>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>40 0.3 5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>40 0.3 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/White</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="left_front_plus_wall">
+      <pose>13.65 1.78 2.5 0 0 0</pose>
+      
+      <static>true</static>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>12.7 0.44 5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>12.7 0.44 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/White</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="left_behind_plus_wall">
+      <pose>-10 1.78 2.5 0 0 0</pose>
+      
+      <static>true</static>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>20 0.44 5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>20 0.44 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/White</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="box">
+      <pose>-2.75 1.42 0.35 0 0 0</pose>
+      
+      <static>true</static>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.7 0.28 0.71</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.7 0.28 0.71</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="door_step">
+      <pose>0.582 -1.85 0.09 0 0 0</pose>
+      
+      <static>true</static>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1.164 0.3 0.18</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1.164 0.3 0.18</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="pillar_1">
+      <pose>7.6225 -1.78 2.5 0 0 0</pose>
+      
+      <static>true</static>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.645 0.44 5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.645 0.44 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="pillar_2">
+      <pose>-0.3225 -1.78 2.5 0 0 0</pose>
+      
+      <static>true</static>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.645 0.44 5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.645 0.44 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="pillar_3">
+      <pose>14.74 -1.78 2.5 0 0 0</pose>
+      
+      <static>true</static>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.645 0.44 5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.645 0.44 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="pillar_4">
+      <pose>-7 -1.78 2.5 0 0 0</pose>
+      
+      <static>true</static>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.645 0.44 5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.645 0.44 5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  <!-- 从(1.0, -1.5)->(1.0, 1.5)做往返运动 -->
+  <model name="cylinder_1">
+      <pose>1 -1.5 0.875 0 0 0</pose>
+      <static>false</static>
+      <link name="link">
+        <gravity>false</gravity> <collision name="collision">
+          <geometry><cylinder><radius>0.2</radius><length>1.75</length></cylinder></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.2</radius><length>1.75</length></cylinder></geometry>
+          <material><script><name>Gazebo/Red</name><uri>file://media/materials/scripts/gazebo.material</uri></script></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- 从(2, 1.5)->(2, -1.5)做往返运动 -->
+    <model name="cylinder_2">
+      <pose>2.0 1.5 0.875 0 0 0</pose>
+      <static>false</static>
+      <link name="link">
+        <gravity>false</gravity>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.2</radius><length>1.75</length></cylinder></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.2</radius><length>1.75</length></cylinder></geometry>
+          <material><script><name>Gazebo/Blue</name><uri>file://media/materials/scripts/gazebo.material</uri></script></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- 以(4.7, 0)为圆心的圆做圆周运动 -->
+    <model name="cylinder_3">
+      <pose>3.0 0 0.875 0 0 0</pose>
+      <static>false</static>
+      <link name="link">
+        <gravity>false</gravity>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.3</radius><length>1.75</length></cylinder></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.3</radius><length>1.75</length></cylinder></geometry>
+          <material><script><name>Gazebo/Green</name><uri>file://media/materials/scripts/gazebo.material</uri></script></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- 沿着(4.7, 1.5), (4.7, -1.5)做往返运动 -->
+    <model name="move_pillar">
+      <pose>4.7 0 1 0 0 0</pose>
+      <static>true</static>
+      
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.2 1 2</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.2 1 2</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Black</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
