@@ -1,12 +1,15 @@
 # 走廊避障导航 （ROS2、SAC、Lidar、静态+动态障碍物避障）
 
 **版本说明：**
+
 Ubuntu22.04 + ROS2(Humble)
 
 **文件结构说明：**
+
 <img width="3735" height="730" alt="yuque_diagram" src="https://github.com/user-attachments/assets/57ea2699-7720-4e5d-967f-9ba64bd90cf0" />
 
 **文件作用说明：**
+
 1. launch 文件夹：用于存放仿真训练和真机部署时的启动文件。
 2. hallway_pkg 文件夹：文件夹名与源代码名相同（ROS2 项目配置），这里存放的 py 文件用于在 setup.py 中声明并在 .launch.py 文件中启动。
 3. checkpoint 文件夹：存放仿真环境中训练的模型文件、奖励曲线等。
@@ -23,7 +26,9 @@ Ubuntu22.04 + ROS2(Humble)
 14. run_reality.py：真实场景中接收雷达消息并输出动作的程序入口。
 
 **程序运行说明：**
+
 仿真训练：colcon build --packages-select hallway_pkg && source install/setup.bash && ros2 launch hallway_pkg simulation.launch.py
+
 真机演示：colcon build --packages-select hallway_pkg && source install/setup.bash && ros2 launch hallway_pkg reality.launch.py
 
 **效果演示：**
