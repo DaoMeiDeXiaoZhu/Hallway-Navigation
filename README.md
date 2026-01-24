@@ -2,7 +2,7 @@
 
 **版本说明：**
 
-Ubuntu22.04 + ROS2(Humble)
+Ubuntu22.04 + ROS2(Humble) + python3.10.12
 
 **文件结构说明：**
 
@@ -30,6 +30,13 @@ Ubuntu22.04 + ROS2(Humble)
 仿真训练：colcon build --packages-select hallway_pkg && source install/setup.bash && ros2 launch hallway_pkg simulation.launch.py
 
 真机演示：colcon build --packages-select hallway_pkg && source install/setup.bash && ros2 launch hallway_pkg reality.launch.py
+
+**项目不足：**
+
+1. 训练时使用的场地摩擦力、雷达频率、精度与现实有一定差距。
+2. 训练时奖励函数存在一定的震荡，后期需要对奖励函数进行精准调优。
+3. 训练时的话题接收和发送默认没有延迟，部署时小车的数据需要传回服务器，服务器输出动作再发送给小车存在延迟。（可以ssh登录小车后将项目部署到小车内部）
+4. 训练时使用的gazebo定位真值，而真实部署的时候使用的是slam，两者在精度和延迟上有差距。（gazebo训练时可以对位置添加高斯噪声和延迟，或者训练时也使用slam定位）
 
 **效果演示：**
 
