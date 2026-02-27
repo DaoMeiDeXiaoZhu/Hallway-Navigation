@@ -25,7 +25,7 @@ Ubuntu22.04 + ROS2(Humble) + python3.10.12
 13. sac_reality.py：真实场景部署时用到的 sac 模型，包含 replay_buffer、networks、agent。
 14. run_reality.py：真实场景中接收雷达消息并输出动作的程序入口。
 
-**程序运行说明：**
+**程序运行说明(提前退出anaconda环境)：**
 
 仿真训练：colcon build --packages-select hallway_pkg && source install/setup.bash && ros2 launch hallway_pkg simulation.launch.py
 
